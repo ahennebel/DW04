@@ -10,17 +10,35 @@
         <meta name="format-detection" content="telephone=no">
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <link rel="stylesheet" type="text/css" href="index.css">
         <title>DW04</title>
     </head>
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
+	<!-- Début code jerome -->
+        <div class="texte">
+        <p><span class="unilim">Unilim</span> <span class="calendar">Calendar</span></p>
+		</div>
+		
+		<div class="img">
+		<img src="images/logo-ul@2x_1.png"></img>
+		</div>
+		
+		<div class="formulaire">
+		<form class ="form" method='post' action=''>
+                <label><input class="identifiant" type="text" placeholder="Identifiant" name="identifiant" id="identifiant" /></label>
+                <label><input class="password" type="password" placeholder="Mot de passe" name="password" id="password" /></label>
+				<br/>
+				<br/>
+                <label><input class="connexion" type="submit" value="Se connecter"/></label>
+            </form>
+		</div>
+		<br/>
+		<br/>
+		<div class="motdepasseoublie">
+		<p><img src="images/key-silhouette-grey_1.png"></img> <a href="#">Mot de passe oublié ?</a></p>
+		</div>
+	<!-- Fin code jerome-->
+	
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="scripts/platformOverrides.js"></script>
         <script type="text/javascript" src="scripts/index.js"></script>
