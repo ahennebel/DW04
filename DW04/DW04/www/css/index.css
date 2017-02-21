@@ -8,9 +8,11 @@ body {
     -webkit-touch-callout: none;
     -webkit-text-size-adjust: none;
     -webkit-user-select: none;
-	background-color:#ffffff;
+	  background-color:#ffffff;
     background-attachment:fixed;
-    font-family:'Eras Demi ITC';
+    font-family: 'Raleway', sans-serif;
+    font-style: italic;
+    font-weight: 700;
     font-size:12px;
     height:100%;
     margin:0px;
@@ -20,60 +22,70 @@ body {
 
 .texte{
 	height:100%;
-    margin:0px;
-    padding:50px 0 0 410px;
-    width:70%;
+  text-align: center;
+  margin-top:50px;
 }
 
 .unilim{
-	font-family:'Eras Demi ITC';
-    font-size:52px;
-	font-weight:bold;
-	color:#b52025
+	font-family: 'Raleway', sans-serif;
+  font-size:52px;
+  font-style: italic;
+  font-weight: 700;
+	color:#b52025;
 }
 
 .calendar{
-	font-family:'Eras Demi ITC';
-    font-size:52px;
-	font-weight:bold;
+	font-family: 'Raleway', sans-serif;
+  font-size:52px;
+  font-style: italic;
+  font-weight: 700;
 	color:#525c67
 }
 
 .img{
-	padding: 60px 0 0 510px;
+  text-align: center;
+  margin-top:80px;
 }
 
 .formulaire{
 	margin-top: 10px;
+  text-align: center;
 }
 
 .form{
-    position: relative;
-    left: 45%;
-    top: 10%;
-    height: 100px;                  
-    width: 300px;                   
-    padding: 180px 0px 0px 0px;     
-    margin: -115px 0px 0px -112px;
+  position: relative;
+  text-align: center;
+  top: 10%;
+  left: 42%;
+  height: 100px;
+  width: 300px;
+  padding: 180px 0px 0px 0px;
+  margin: 0px;
 	border-radius: 10px;
 }
 
 .identifiant{
+  font-family: 'Open Sans', sans-serif;
+	font-weight:400;;
+	font-size: 14px;
 	border-radius: 5px 5px 0px 0px;
 	border: 1px solid #616161;
-	width: 300px; 
-	height: 50px;   
+	width: 300px;
+	height: 50px;
 }
 .password{
+  font-family: 'Open Sans', sans-serif;
+	font-weight:400;;
+	font-size: 14px;
 	border-radius: 0px 0px 5px 5px;
 	border: 1px solid #616161;
 	width: 300px;
-	height: 50px;   
+	height: 50px;
 }
 
 .connexion{
 	background-color:#525c67;
-	font-family:Open sans SemiBold;
+	font-family: 'Open Sans', sans-serif;
 	font-weight:bold;
 	font-size: 24px;
 	color: #ffffff;
@@ -85,9 +97,10 @@ body {
 }
 
 .motdepasseoublie{
-	padding:150px 0 0 520px;
-	font-family:Open sans Regular;
-	font-weight:bold;
+  text-align: center;
+  padding: 100px 0 0 0;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:400;;
 	font-size: 12px;
 	color:#525c67;
 }
@@ -99,6 +112,5 @@ body {
 /*Fin code jerome*/
 
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
-    
-}
 
+}
