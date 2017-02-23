@@ -2,7 +2,7 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
-/* Débute code jerome*/
+/* Début code page index*/
 
 body {
     -webkit-touch-callout: none;
@@ -83,7 +83,7 @@ body {
 }
 .password{
   font-family: 'Open Sans', sans-serif;
-	font-weight:400;;
+	font-weight:400;
 	font-size: 14px;
 	border-radius: 0px 0px 5px 5px;
 	border: 1px solid #616161;
@@ -118,7 +118,7 @@ body {
 	color:#525c67;
 }
 
-/*Fin code jerome*/
+/*Fin code page index*/
 
 /*Debut code page accueil*/
 .header{
@@ -184,6 +184,39 @@ body {
 
 
 /*Fin code page accueil*/
+
+/*Début de la page profil */
+
+.header_profil{
+    height:10%;
+    position:absolute;
+    top:0;left:0;right:0;
+    background:#ffffff;
+}
+
+.content1{
+    position:absolute;
+    top:50%;
+	left:510px;
+	right:0;
+    padding-top:5px;
+    background:#ABBBBA;
+}
+
+.choix{
+	background-color:#525c67;
+	font-family: 'Open Sans', sans-serif;
+	font-weight:bold;
+	font-size: 24px;
+	color: #ffffff;
+	border: solid #525c67;
+	width: 300px;
+	height: 45px;
+	cursor: pointer;
+}
+
+/* Fin de la page profil */
+
 
 @media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
 
