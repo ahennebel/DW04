@@ -203,6 +203,10 @@ body {
     background:#ABBBBA;
 }
 
+.img1{
+	vertical-align: top;
+}
+
 .choix{
 	background-color:#525c67;
 	font-family: 'Open Sans', sans-serif;
