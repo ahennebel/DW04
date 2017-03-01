@@ -3,7 +3,7 @@
 <?php
 try
 {
-$bdd = new PDO('mysql:host=localhost;dbname=jeromes_mood124;charset=utf8' , 'root' , '');
+$bdd = new PDO('mysql:host=db4free.net;dbname=unilimcalendar2;charset=utf8' , 'unilimcalendar' , '3cc08b');
 print 'je suis connecte';
 }
 catch (Exception $e)
