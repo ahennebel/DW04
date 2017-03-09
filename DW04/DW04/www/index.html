@@ -29,25 +29,32 @@ include 'index.php';
         <img src="images/logo-ul@2x_1.png"></img>
     </div>
 
-    <div class="formulaire">
-        <form class="form" method='post' action='accueil.html'>
-            <label><input class="identifiant" type="text" placeholder="Identifiant" name="identifiant" id="identifiant" /></label>
-            <label><input class="password" type="password" placeholder="Mot de passe" name="password" id="password" /></label>
-            <br/>
-            <br/>
-            <label><input class="connexion" type="submit" value="Se connecter"/></label>
-        </form>
+    <div id="content_login">
+        <div class="formulaire">
+            <form class="form" id="login" method="POST" action="">
+                <label><input class="identifiant" type="text" placeholder="Identifiant" name="identifiant" id="identifiant" /></label>
+                <label><input class="password" type="password" placeholder="Mot de passe" name="password" id="password" /></label>
+                <br />
+                <br />
+                <label><input class="connexion" type="submit" value="Se connecter" /></label>
+            </form>
+        </div>
+        <br />
+        <br />
+        <div class="motdepasseoublie">
+            <p></img> <a href="#">Mot de passe oublié ?</a></p>
+        </div>
     </div>
-    <br/>
-    <br/>
-    <div class="motdepasseoublie">
-        <p><img src="images/key-silhouette-grey_1.png"></img> <a href="#">Mot de passe oublié ?</a></p>
-    </div>
+
+    <div id="view_calendar"></div>
+
     <!-- Fin code jerome-->
 
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script type="text/javascript" src="scripts/index.js"></script>
+    <script type="text/javascript" src="scripts/script.js"></script>
 </body>
 
 </html>
