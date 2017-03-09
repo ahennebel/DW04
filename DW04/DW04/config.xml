@@ -6,6 +6,12 @@
   <content src="index.html" />
   <access origin="*" />
   <vs:features />
+  <meta http-equiv="Content-Security-Policy" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com; style-src 'self' 'unsafe-inline'; media-src *" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' foo.com" />
+  <meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; frame-src 'self' https://cordova.apache.org" />
   <preference name="SplashScreen" value="screen" />
   <preference name="windows-target-version" value="8.1" />
   <!-- Support for Cordova 5.0.0 plugin system -->
@@ -16,6 +22,7 @@
   <allow-intent href="sms:*" />
   <allow-intent href="mailto:*" />
   <allow-intent href="geo:*" />
+  <allow-navigation href="http://localhost/*" />
   <platform name="android">
     <allow-intent href="market:*" />
   </platform>
@@ -107,4 +114,5 @@
     <splash src="res/screens/wp8/SplashScreenImage.png" width="768" height="1280" />
   </platform>
   <plugin name="cordova-sqlite-storage" version="1.5.3" src="https://github.com/litehelpers/Cordova-sqlite-storage.git" />
+  <access />
 </widget>

@@ -17,14 +17,15 @@
         } else {
             // Envoi de la requête HTTP en mode asynchrone
             $.ajax({
-                url: 'traitement.php', // Le nom du fichier indiqué dans le formulaire
+                url: 'http://localhost/dw2/traitement.php', // Le nom du fichier indiqué dans le formulaire
                 type: 'POST', // La méthode indiquée dans le formulaire (get ou post)
                 data: $this.serialize(), // Je sérialise les données (j'envoie toutes les valeurs présentes dans le formulaire)
                 dataType: 'json', //format de sortie json
                 success: function (json) { // Je récupère la réponse du fichier PHP                     
-                    //$(html).appendTo("#view_calendar");
-                    console.log("j'ai recu le fichier");
-                    alert(JSON.stringify(json));
+                    //$().appendTo("#view_calendar");
+                    document.write(JSON.stringify(json));
+                    //console.log("j'ai recu le fichier");
+                    //alert(JSON.stringify(json));
                 }
             });
         }
