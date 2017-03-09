@@ -1,7 +1,6 @@
 ﻿$(document).ready(function () {
     // Lorsque je soumets le formulaire
-    $('#login').on('submit', function (e) {
-        console.log('je suis passe dans le jquery');
+    $('#login').on('submit', function (e) {       
         e.preventDefault(); // J'empêche le comportement par défaut du navigateur, c-à-d de soumettre le formulaire
 
         var $this = $(this); // L'objet jQuery du formulaire
@@ -17,12 +16,12 @@
         } else {
             // Envoi de la requête HTTP en mode asynchrone
             $.ajax({
-                url: 'traitement.php', // Le nom du fichier indiqué dans le formulaire
+                url: 'http://xjapanfan.com/unilimcalendar/traitement.php', // Le nom du fichier indiqué dans le formulaire
                 type: 'POST', // La méthode indiquée dans le formulaire (get ou post)
                 data: $this.serialize(), // Je sérialise les données (j'envoie toutes les valeurs présentes dans le formulaire)
                 dataType: 'json', //format de sortie json
                 success: function (json) { // Je récupère la réponse du fichier PHP                     
-                    //$(html).appendTo("#view_calendar");
+                    $(JSON.stringify(json)).appendTo("#view_calendar");
                     console.log("j'ai recu le fichier");
                     alert(JSON.stringify(json));
                 }
