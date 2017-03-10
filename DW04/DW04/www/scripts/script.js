@@ -27,15 +27,9 @@
                         $('<span>' + pseudo + '</span>').appendTo(".nom");
                         $(jQuery.parseJSON(JSON.stringify(json))).each(function () {
                         var nom = this.intitule;
-                        var date = this.date;
-                        
-                        $('<p> <span class="calendar_titre">' + nom + '</span><span class="calendar_date">' + date + '</span><a href="#">Activer Alarme</a></p>').appendTo(".events");
-
-                        //document.write(nom + date + "<br>");
-                    });
-                    //document.write(JSON.stringify(json));
-
-                    //alert(JSON.stringify(json));                             
+                        var date = this.date;                        
+                        $('<p> <span class="calendar_titre">' + nom + '</span><span class="calendar_date">' + date + '</span><a href="#">Activer Alarme</a></p>').appendTo(".events");                        
+                    });                                            
                 }
             });
             }
@@ -49,8 +43,34 @@
                 alert('Vous avez été deconnecté');
                 $('#content_login').removeClass("unactive");
                 $('#view_calendar').addClass("unactive");
+                $('.events').empty();
+                $('.nom').empty();
+                window.location.href = index.html;
             }
         })
     });
+
+    //Gestion du rafraichissement de la page
+    $('#actualise').click(function () {
+        $.ajax({
+            url: 'http://xjapanfan.com/unilimcalendar/traitement.php',
+            dataType: 'json', //format de sortie json
+            success: function (json) { // Je récupère la réponse du fichier PHP 
+                $('#content_login').addClass("unactive");
+                $('#view_calendar').removeClass("unactive");
+                $('<span>' + pseudo + '</span>').appendTo(".nom");
+                $(jQuery.parseJSON(JSON.stringify(json))).each(function () {
+                    var nom = this.intitule;
+                    var date = this.date;
+
+                    $('<p> <span class="calendar_titre">' + nom + '</span><span class="calendar_date">' + date + '</span><a href="#">Activer Alarme</a></p>').appendTo(".events");
+
+
+                });
+            }
+        })
+    });
+
+
 
 });
