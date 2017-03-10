@@ -152,12 +152,17 @@ body {
 
 .content {
     position: absolute;
-    height: 280px;
+    height: 450px;
     top: 10%;
     left: 0;
     right: 0;
     padding-top: 5px;
     background: #ABBBBA;
+}
+
+.events{
+    margin-top: 15%;
+    text-align:center;
 }
 
 .nom {
@@ -168,6 +173,7 @@ body {
     bottom: 0;
     padding-top: 10%;
     margin: auto;
+    text-align:center;
 }
 
 .logo span {
@@ -187,14 +193,17 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
+    background: #ABBBBA;
+    
 }
 
 .nav a {
     display: block;
     float: left;
-    width: 49%;
+    width: 49.4%;
     border: 1px solid grey;
     overflow: hidden;
+    background-color:white;
 }
 
 .nav a img {

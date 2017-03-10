@@ -1,4 +1,5 @@
 ﻿$(document).ready(function () {
+
     // Lorsque je soumets le formulaire
     $('#login').on('submit', function (e) {        
         e.preventDefault(); // J'empêche le comportement par défaut du navigateur, c-à-d de soumettre le formulaire
@@ -23,11 +24,12 @@
                 success: function (json) { // Je récupère la réponse du fichier PHP 
                         $('#content_login').addClass("unactive");
                         $('#view_calendar').removeClass("unactive");
+                        $('<span>' + pseudo + '</span>').appendTo(".nom");
                         $(jQuery.parseJSON(JSON.stringify(json))).each(function () {
                         var nom = this.intitule;
                         var date = this.date;
-
-                        $('<p> <span class="calendar_titre">' + nom + '</span><span class="calendar_date">' + date + '</span><a href="#">Activer Alarme</a></p>').appendTo("#view_calendar");
+                        
+                        $('<p> <span class="calendar_titre">' + nom + '</span><span class="calendar_date">' + date + '</span><a href="#">Activer Alarme</a></p>').appendTo(".events");
 
                         //document.write(nom + date + "<br>");
                     });
@@ -38,4 +40,17 @@
             });
             }
     });
+
+    //Gestion de la deconnection des utilisateurs
+    $('#logout').click(function () {
+        $.ajax({
+            url: 'http://xjapanfan.com/unilimcalendar/logout.php',            
+            success: function (html) {
+                alert('Vous avez été deconnecté');
+                $('#content_login').removeClass("unactive");
+                $('#view_calendar').addClass("unactive");
+            }
+        })
+    });
+
 });
