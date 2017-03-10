@@ -25,10 +25,15 @@
                     $(jQuery.parseJSON(JSON.stringify(json))).each(function() {  
                         var nom = this.intitule;
                         var date = this.date;
-                        //Affichage du resultat temporaire
+
                         $('<p> <span class="calendar_titre">'+nom+'</span><span class="calendar_date">'+date+'</span><a href="#">Activer Alarme</a></p>').appendTo("#view_calendar");
+                         
+                        //document.write(nom + date + "<br>");
+                    });
+                    //document.write(JSON.stringify(json));
+                    
+                    //alert(JSON.stringify(json));                             
                 }
-            });
-        }
+        
     });
 });
