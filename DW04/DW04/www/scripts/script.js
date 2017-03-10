@@ -22,18 +22,19 @@
                 data: $this.serialize(), // Je sérialise les données (j'envoie toutes les valeurs présentes dans le formulaire)
                 dataType: 'json', //format de sortie json
                 success: function (json) { // Je récupère la réponse du fichier PHP                     
-                    $(jQuery.parseJSON(JSON.stringify(json))).each(function() {  
+                    $(jQuery.parseJSON(JSON.stringify(json))).each(function () {
                         var nom = this.intitule;
                         var date = this.date;
 
-                        $('<p> <span class="calendar_titre">'+nom+'</span><span class="calendar_date">'+date+'</span><a href="#">Activer Alarme</a></p>').appendTo("#view_calendar");
-                         
+                        $('<p> <span class="calendar_titre">' + nom + '</span><span class="calendar_date">' + date + '</span><a href="#">Activer Alarme</a></p>').appendTo("#view_calendar");
+
                         //document.write(nom + date + "<br>");
                     });
                     //document.write(JSON.stringify(json));
-                    
+
                     //alert(JSON.stringify(json));                             
                 }
-        
+            });
+            }
     });
 });
