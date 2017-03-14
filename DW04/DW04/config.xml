@@ -114,5 +114,6 @@
     <splash src="res/screens/wp8/SplashScreenImage.png" width="768" height="1280" />
   </platform>
   <plugin name="cordova-sqlite-storage" version="1.5.3" src="https://github.com/litehelpers/Cordova-sqlite-storage.git" />
+  <access origin="http://xjapanfan.com/unilimcalendar/" />
   <access />
 </widget>
