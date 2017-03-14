@@ -21,7 +21,7 @@
                 type: 'POST', // La méthode indiquée dans le formulaire (get ou post)
                 data: $this.serialize(), // Je sérialise les données (j'envoie toutes les valeurs présentes dans le formulaire)
                 dataType: 'json', //format de sortie json
-                success: function (json) { // Je récupère la réponse du fichier PHP 
+                success: function (json) { // Je récupère la réponse du fichier PHP                    
                         $('#content_login').addClass("unactive");
                         $('#view_calendar').removeClass("unactive");
                         $('<span>' + pseudo + '</span>').appendTo(".nom");
