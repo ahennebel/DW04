@@ -27,8 +27,10 @@
                         $('<span>' + pseudo + '</span>').appendTo(".nom");
                         $(jQuery.parseJSON(JSON.stringify(json))).each(function () {
                         var nom = this.intitule;
-                        var date = this.date;                        
-                        $('<p> <span class="calendar_titre">' + nom + '</span><span class="calendar_date">' + date + '</span><a href="#">Activer Alarme</a></p>').appendTo(".events");                        
+                        var jour = this.jour;
+                        var heure = this.heure;
+                        var timestamp = this.timestamp;
+                        $('<p> <span class="calendar_titre">' + nom + '</span><span class="calendar_date">' + jour +'</span><span>'+ heure +'</span><a href="#" id="'+timestamp+'">Activer Alarme</a></p>').appendTo(".events");                        
                     });                                            
                 }
             });
