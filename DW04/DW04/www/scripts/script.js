@@ -47,7 +47,7 @@
                 $('#view_calendar').addClass("unactive");
                 $('.events').empty();
                 $('.nom').empty();
-                window.location.href = index.html;
+                window.location.href = 'index.html';
             }
         })
     });
