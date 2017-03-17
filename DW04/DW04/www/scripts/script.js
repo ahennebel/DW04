@@ -30,7 +30,7 @@
                         var jour = this.jour;
                         var heure = this.heure;
                         var timestamp = this.timestamp;
-                        $('<p> <span class="calendar_titre">' + nom + '</span><span class="calendar_date">' + jour +'</span><span>'+ heure +'</span><a href="#" class="alarm" id="'+timestamp+'">Activer Alarme</a></p>').appendTo(".events");                        
+                        $('<p> <span class="calendar_titre">' + nom + '</span><span class="calendar_date">' + jour +'</span><span>'+ heure +'</span><a href="#alarm" class="alarm" id="'+timestamp+'">Activer Alarme</a></p>').appendTo(".events");                        
                     });                                            
                 }
             });
@@ -66,7 +66,7 @@
                     var jour = this.jour;
                     var heure = this.heure;
                     var timestamp = this.timestamp;
-                    $('<p> <span class="calendar_titre">' + nom + '</span><span class="calendar_date">' + jour + '</span><span>' + heure + '</span><a href="#" class="alarm" id="' + timestamp + '">Activer Alarme</a></p>').appendTo(".events");
+                    $('<p> <span class="calendar_titre">' + nom + '</span><span class="calendar_date">' + jour + '</span><span>' + heure + '</span><a href="#alarm" class="alarm" id="' + timestamp + '">Activer Alarme</a></p>').appendTo(".events");
 
 
                 });
@@ -76,11 +76,13 @@
 
 
     //Gestion des alarmes
-    $('.alarm').click(function () {
-        var heure = $(this).attr('id');
-        $('<p>'+ heure +'</p>').appendTo(".events");
-
+    $('.alarm').each(function (index) {
+        $(this).click(function () {
+            var heure = $(this).attr('id');
+            $('<p>' + heure + '</p>').appendTo(".events");
+        });
     });
+   
 
 
 
