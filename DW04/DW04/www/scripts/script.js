@@ -78,7 +78,7 @@
     //Gestion des alarmes
     $('.alarm').click(function () {
         var heure = $(this).attr('id');
-        $('<p>'+heure+'</p>').appendTo(".events");
+        $('<p>'+ heure +'</p>').appendTo(".events");
 
     });
 
