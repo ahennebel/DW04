@@ -12,7 +12,17 @@
         },
         "cordova-sqlite-storage": {
             "PACKAGE_NAME": "io.cordova.myapp29d614"
+        },
+        "de.appplant.cordova.plugin.local-notification": {
+            "PACKAGE_NAME": "io.cordova.myapp29d614"
         }
     },
-    "dependent_plugins": {}
+    "dependent_plugins": {
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "io.cordova.myapp29d614"
+        },
+        "cordova-plugin-app-event": {
+            "PACKAGE_NAME": "io.cordova.myapp29d614"
+        }
+    }
 }

@@ -116,4 +116,6 @@
   <plugin name="cordova-sqlite-storage" version="1.5.3" src="https://github.com/litehelpers/Cordova-sqlite-storage.git" />
   <access origin="http://xjapanfan.com/unilimcalendar/" />
   <access />
+  <plugin name="de.appplant.cordova.plugin.local-notification" version="0.8.4" src="https://github.com/katzer/cordova-plugin-local-notifications" />
+  <plugin name="de.appplant.cordova.plugin.local-notification" version="0.8.4" src="https://github.com/katzer/cordova-plugin-local-notifications" />
 </widget>
