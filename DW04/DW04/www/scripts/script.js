@@ -79,8 +79,7 @@
     $('.events').on('click', '.alarm', function () {
         $(this).css('color', 'green');
         var date = this.id;
-        var titre = $(this).prev('.calendar_titre').text(); //on cherche a selectionner l'element calendar_titre present avant le timestamp selectionne NON FONCTIONNEL
-        alert(titre);
+        var titre = $(this).prevAll('.calendar_titre').text();
         /*var sound*/
 
         //ajout de l'alarme A COMPLETER AVEC LES VALEURS
@@ -88,8 +87,7 @@
             id: 1,
             title: titre,
             message: "Cours imminent",
-            at: date,
-            sound: sound           
+            at: date                     
         });
 
     });
