@@ -78,18 +78,18 @@
     //Gestion des alarmes
     $('.events').on('click', '.alarm', function () {
         $(this).css('color', 'green');
-        //alert(this.id);
-        var titre = $(this).closest('.calendar_titre').text(); //on cherche a selectionner l'element calendar_titre present avant le timestamp selectionne NON FONCTIONNEL
+        var date = this.id;
+        var titre = $(this).prev('.calendar_titre').text(); //on cherche a selectionner l'element calendar_titre present avant le timestamp selectionne NON FONCTIONNEL
         alert(titre);
+        /*var sound*/
 
         //ajout de l'alarme A COMPLETER AVEC LES VALEURS
         cordova.plugins.notification.local.schedule({
             id: 1,
-            title: "Message Title",
-            message: "Message Text",
+            title: titre,
+            message: "Cours imminent",
             at: date,
-            sound: sound,
-            icon: "http://domain.com/icon.png"
+            sound: sound           
         });
 
     });
