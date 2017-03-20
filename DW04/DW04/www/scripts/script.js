@@ -85,7 +85,7 @@
                 $(this).css('color', 'green');
                 var date = this.id;
                 var titre = $(this).prevAll('.calendar_titre').text();
-                var pid = $(this).parent('.alarmoff').attr('id', i);
+                $(this).parent('.alarmoff').attr('id', i);
                 alert(i);
 
                 //ajout de l'alarme 
@@ -96,9 +96,12 @@
                     at: date
                 });
         }
-        else {
+        else
+        {
+            //A integrer code pour enlever l'alarme
             $(this).css('color', 'black');
             $(this).parent('.alarmoff').attr('id', 0);
+            i = 0;
         }
     });
     
