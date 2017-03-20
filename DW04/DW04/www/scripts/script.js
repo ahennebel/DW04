@@ -77,7 +77,7 @@
 
     //Gestion des alarmes
     $('.alarm').click(function () {
-        alert(this.id);
+        $('j"ai été sélectionné').appendTo(this);
     });
     
    
