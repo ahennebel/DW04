@@ -77,7 +77,21 @@
 
     //Gestion des alarmes
     $('.events').on('click', '.alarm', function () {
-        alert(this.id);
+        $(this).css('color', 'green');
+        //alert(this.id);
+        var titre = $(this).closest('.calendar_titre').text(); //on cherche a selectionner l'element calendar_titre present avant le timestamp selectionne NON FONCTIONNEL
+        alert(titre);
+
+        //ajout de l'alarme A COMPLETER AVEC LES VALEURS
+        cordova.plugins.notification.local.schedule({
+            id: 1,
+            title: "Message Title",
+            message: "Message Text",
+            at: date,
+            sound: sound,
+            icon: "http://domain.com/icon.png"
+        });
+
     });
     
    
