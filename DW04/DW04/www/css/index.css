@@ -162,7 +162,7 @@ body {
 
 .events{
     margin-top: 15%;
-    text-align:center;
+    
 }
 
 .nom {
@@ -296,5 +296,39 @@ input {
     text-align: center;
 }
 
-
 /*------- Fin de la page profil-------*/
+
+/*Affichage des alarmes*/
+.alarmoff span, .alarmoff a {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 2%;
+    text-align:left;
+}
+
+.calendar_titre{
+    color:#b52025;
+    text-align:left;
+}
+
+.calendar_date{
+    color:#525c67;
+}
+
+.calendar_heure{
+    color:#525c67;
+    font-weight:bold;
+}
+
+.alarm{
+    text-decoration:none;
+    color:black;
+}
+
+.alarm:hover{
+    font-weight:bold;
+}
+
+.alarm:visited{
+    text-decoration:none;
+}

@@ -30,7 +30,7 @@
                         var jour = this.jour;
                         var heure = this.heure;
                         var timestamp = this.timestamp;
-                        $('<p class="alarmoff" id="0"><span class="calendar_titre">' + nom + '</span><span class="calendar_date">' + jour +'</span><span>'+ heure +'</span><a href="#alarm" class="alarm" id="'+timestamp+'">Activer Alarme</a></p>').appendTo(".events");                        
+                        $('<p class="alarmoff" id="0"><span class="calendar_titre">' + nom + '</span><span class="calendar_date">' + jour +'</span><span class="calendar_heure">'+ heure +'</span><a href="#alarm" class="alarm" id="'+timestamp+'">Activer Alarme</a></p>').appendTo(".events");                        
                     });                                            
                 }
             });
@@ -66,7 +66,7 @@
                     var jour = this.jour;
                     var heure = this.heure;
                     var timestamp = this.timestamp;
-                    $('<p class="alarmoff" id=0> <span class="calendar_titre">' + nom + '</span><span class="calendar_date">' + jour + '</span>  <span>' + heure + '</span><a href="#alarm" class="alarm" id="' + timestamp + '">Activer Alarme</a></p>').appendTo(".events");
+                    $('<p class="alarmoff" id=0> <span class="calendar_titre">' + nom + '</span><span class="calendar_date">' + jour + '</span>  <span class="calendar_heure">' + heure + '</span><a href="#alarm" class="alarm" id="' + timestamp + '">Activer Alarme</a></p>').appendTo(".events");
 
 
                 });
@@ -85,8 +85,7 @@
                 $(this).css('color', 'green');
                 var date = this.id;
                 var titre = $(this).prevAll('.calendar_titre').text();
-                $(this).parent('.alarmoff').attr('id', i);
-                alert(i);
+                $(this).parent('.alarmoff').attr('id', i);                
 
                 //ajout de l'alarme 
                 cordova.plugins.notification.local.schedule({
@@ -98,10 +97,17 @@
         }
         else
         {
-            //A integrer code pour enlever l'alarme
+            //on enleve l'alarme
+            var alarmid = $(this).parent('.alarmoff').attr('id');
             $(this).css('color', 'black');
             $(this).parent('.alarmoff').attr('id', 0);
             i = 0;
+            alert(alarmid);
+            cordova.plugins.notification.local.cancel(alarmid, function () {
+                alert('notification enlevee');
+            }, scope);
+                        
+           
         }
     });
     
