@@ -302,17 +302,18 @@ input {
 .alarmoff span, .alarmoff a {
     display: inline-block;
     vertical-align: top;
-    margin-left: 2%;
-    text-align:left;
+    margin-left: 1%;    
 }
 
 .calendar_titre{
     color:#b52025;
     text-align:left;
+    width:70px;
 }
 
 .calendar_date{
     color:#525c67;
+    text-align:center;
 }
 
 .calendar_heure{
@@ -323,6 +324,8 @@ input {
 .alarm{
     text-decoration:none;
     color:black;
+    padding-right:1%;
+    float:right;
 }
 
 .alarm:hover{
