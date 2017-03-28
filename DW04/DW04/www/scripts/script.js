@@ -30,7 +30,8 @@
                         var jour = this.jour;
                         var heure = this.heure;
                         var timestamp = this.timestamp;
-                        $('<p class="alarmoff" id="0"><span class="calendar_titre">' + nom + '</span><span class="calendar_date">' + jour +'</span><span class="calendar_heure">'+ heure +'</span><a href="#alarm" class="alarm" id="'+timestamp+'">Activer Alarme</a></p>').appendTo(".events");                        
+                        $('<p class="alarmoff" id="0"><span class="calendar_titre">' + nom + '</span><span class="calendar_date">'
+                            + jour + '</span><span class="calendar_heure">' + heure + '</span><a href="#alarm" class="alarm" id="' + timestamp + '">Activer Alarme</a></p>').appendTo(".events");
                     });                                            
                 }
             });
@@ -84,7 +85,7 @@
                 i = i + 1;
                 $(this).css('color', 'green');
                 var date = this.id;
-                var titre = $(this).prevAll('.calendar_titre').text();
+                var titre = $(this).prevAll('.calendar_titre').text();                
                 $(this).parent('.alarmoff').attr('id', i);                
 
                 //ajout de l'alarme 
@@ -100,9 +101,8 @@
             //on enleve l'alarme
             var alarmid = $(this).parent('.alarmoff').attr('id');
             $(this).css('color', 'black');
-            $(this).parent('.alarmoff').attr('id', 0);
-            i = 0;
-            alert(alarmid);
+            $(this).parent('.alarmoff').attr('id', 0);            
+            alert("Alarme n°"+alarmid+"désactivée");
             cordova.plugins.notification.local.cancel(alarmid, function () {
                 alert('notification enlevee');
             }, scope);
